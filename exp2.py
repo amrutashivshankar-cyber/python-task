@@ -1,0 +1,6 @@
+print(int(3.14))
+print(int(True))
+print(False)
+#print(int("4.22"))
+print(int("4"))
+print(int("prasant"))
