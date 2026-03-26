@@ -1,0 +1,726 @@
+ #1) WAP To Perform List Slicing which basics but very important:
+
+mylist = ["prashant", "Ashish", "komal", "ankush", "Ashish", 77, "sandip" , 60.52, "prashant"]  
+print(mylist)  
+print(type(mylist))  
+print(mylist[0])  
+print(mylist[1])   
+print(mylist[2])  
+print(mylist[-1])  
+print(mylist[2:5])  
+print(mylist[:5])   
+print(mylist[1:])  
+print(mylist[1:8:2]) 
+
+# WAP to check list is mutable means change the value
+
+mylist = ["prashant", "Ashish", "komal", "ankush", "Ashish", 77, "sandip" , 60.52, "prashant"]  
+mylist[0]="Akshay"  
+print(mylist) 
+
+# WAP to add the new object in list using ‘append()’ function at the end of list:
+
+mylist.append('harsh')  
+mylist.append("laxman")  
+print(mylist)  
+
+#insert()
+mylist.insert(2,"amruta")
+print(mylist)
+
+#WAP to remove the object from list:
+
+mylist.remove("sandip")  
+print(mylist) 
+
+
+#cloning the list (copy all every object in new list)
+newlist = mylist.copy()  # copy() will copy everything from mylist and returns
+print(mylist)
+print(newlist)
+
+#WAP for multidimensional list:
+
+mylist = [ [ 'prashant',  'jha' ], [ '85.56' ], [ 440022, "yyy" ] ]      
+print("example of multidimensional list: ")      
+print(mylist)      
+#print(mylist[row][col])   first square bracket represent row and second represent col      
+print(mylist[0][0])      
+print(mylist[0][1])      
+print(mylist[1][0])      
+print(mylist[2][0])      
+print(mylist[2][1]) 
+
+
+#WAP to perform arithmetic operation on list:
+
+
+list1=["prashant", "jha"]    
+print(list1*2)                # it will print two times    
+list2 =[50,25.50]    
+print(list1+list2)    
+
+#del()
+mylist = ["prashant", "Ashish", "komal", "ankush", "Ashish", 77, "sandip", 60.52, "prashant"]  
+list2 = [50, 25.50, 'prashant']  
+del list2[2]  
+print(list2)  # Output: [50, 25.5]  
+
+
+## Deleting the list from memory using 'del' keyword   
+list2 = [50, 25.50, 'prashant']  
+del list2  
+# print(list2) would raise NameError  
+  
+# Clearing the elements of a list  
+list2 = [50, 25.50, 'prashant']  
+list2.clear()  
+print(list2)  # Output: []  
+  
+# List typecasting using 'list()' function  
+name = "prashant"  
+print(name)  # Output: prashant  
+myname = list(name)  
+print(myname)  # Output: ['p', 'r', 'a', 's', 'h', 'a', 'n', 't']  
+  
+# Reversing a list using 'reverse()' function  
+mylist = [40, 30, 20, 10]  
+mylist.reverse()  
+print(mylist)  # Output: [10, 20, 30, 40]  
+  
+# Sorting a list using 'sort()' function  
+mylist = [44, 22, 77, 0, 9, 88]  
+mylist.sort()  
+print(mylist)  # Output: [0, 9, 22, 44, 77, 88]  
+  
+# Sorting a list in descending order  
+mylist.sort(reverse=True)  
+print(mylist)  # Output: [88, 77, 44, 22, 9, 0]  
+  
+# Implementing aliasing concept  
+mylist = [44, 22, 77, 0, 9, 88]  
+newlist = mylist  
+print(id(mylist))  # Output: same id  
+print(id(newlist))  # Output: same id  
+  
+# Implementing 'count()' function  
+n = [1, 2, 3, 5, 5, 5, 1, 2, 4, 4, 6, 6, 6]  
+print(n.count(1))  # Output: 2  
+print(n.count(2))  # Output: 2  
+print(n.count(3))  # Output: 1  
+print(n.count(4))  # Output: 2  
+print(n.count(5))  # Output: 3  
+print(n.count(6))  # Output: 3  
+print(n.count(7))  # Output: 0  
+  
+# Returning the last element using 'pop()' function  
+list1 = [3, 4, 5, 6, 7]  
+print(list1.pop())  # Output: 7  
+
+
+#WAP to take input and display output of tuple and understand the above points:
+Program Code:
+
+mytuple = ("prashant", "Ashish", "Rahul","sandip","komal","ankush","rajesh",23,3.15,77,"sandip")  
+print(mytuple)  
+print(type(mytuple))  
+
+
+Output:
+
+('prashant', 'Ashish', 'Rahul', 'sandip', 'komal', 'ankush', 'rajesh', 23, 3.15, 77, 'sandip')
+<class 'tuple'>
+
+
+# WAP to check tuple is immutable or not:
+
+Program Code:
+
+
+mytuple = ("prashant", "Ashish", "Rahul","sandip","komal","ankush","rajesh",23,3.15,77,"sandip")  
+mytuple[2]="sunil"  
+print(mytuple)  
+
+#Output:
+
+TypeError: 'tuple' object does not support item assignment
+
+#Creation of Set objects:
+
+ Eg1: 
+s={10,20,30,40} 
+print(s) 
+print(type(s)) 
+Output: 
+ {40, 10, 20, 30}
+<class 'set'>
+
+#Eg 2:  
+s=set(range(5))  
+print(s) #{0, 1, 2, 3, 4}  
+  
+Note: While creating empty set we have to take special care.  
+Compulsory we should use set() function.  
+  
+s={} ==>It is treated as dictionary but not empty set.  
+Eg:  
+s={}  
+print(s)  
+print(type(s))  
+   
+Output  
+{}  
+<class 'dict'>  
+  
+Eg:  
+s=set()  
+print(s)  
+print(type(s))  
+  
+Output  
+set()  
+<class 'set'>  
+
+#rogram code to implement various operations using set and its functions:
+
+
+# Example 1: Unordered Output of Set 
+myset = {1, 2, "sanjay", 5.66, "rahul", "ayush", "ramesh", "ankit", "rishikesh"}  
+print("Output:", myset)  
+# Output: {'ayush', 1, 2, 'rishikesh', 5.66, 'ramesh', 'sanjay', 'ankit', 'rahul'}  
+  
+# Example 2: Accessing Set Elements by Index (Error Expected)  
+try:  
+    print("Output:", myset[0])  
+except TypeError as e:  
+    print("Output:", e)  
+# Output: TypeError: 'set' object is not subscriptable  
+  
+# Example 3: Adding an Element to a Set  
+myset.add(60)  
+print("Output:", myset)  
+# Output: {1, 2, 5.66, 'rishikesh', 'sanjay', 'rahul', 'ramesh', 'ankit', 60, 'ayush'}  
+  
+# Example 4: Discarding an Element from a Set  
+myset.discard(2)  
+print("Output:", myset)  
+# Output: {1, 'ayush', 'sanjay', 5.66, 'ramesh', 'rishikesh', 'ankit', 'rahul', 60}  
+  
+# Example 5: Removing an Element from a Set  
+try:  
+    myset.remove(1)  
+    print("Output:", myset)  
+except KeyError as e:  
+    print("Output:", e)  
+# Output: {5.66, 'ramesh', 'rishikesh', 'ayush', 'rahul', 'ankit', 'sanjay', 60}  
+  
+# Example 6: Union of Two Sets  
+myset = {10, 20, 30, 40}  
+yorset = {"prashant", "jha"}  
+newset = myset.union(yorset)  
+print("Output:", newset)  
+# Output: {'jha', 20, 40, 10, 'prashant', 30}  
+  
+# Example 7: Intersection of Two Sets  
+myset = {10, 20, 30, 40}  
+yorset = {10, 50, 60, 30}  
+print("Output:", myset.intersection(yorset))  
+# Output: {10, 30}  
+  
+# Example 8: Difference of Two Sets  
+print("Output:", myset.difference(yorset))  
+# Output: {40, 20}  
+  
+# Example 9: Clearing a Set  
+myset.clear()  
+print("Output:", myset)  
+# Output: set()  
+  
+# Example 10: Using pop() Function  
+myset = {10, 20, 30, 40}  
+print("Output:", myset.pop())  
+# Output: 10 (or another element, as sets are unordered)  
+  
+# Example 11: Difference using '-' Operator  
+myset = {10, 20, 30, 40}  
+yorset = {10, 50, 60, 30}  
+print("Output:", myset - yorset)  
+# Output: {40, 20}  
+  
+# Example 12: Union using '|' Operator  
+print("Output:", myset | yorset)  
+# Output: {40, 10, 50, 20, 60, 30}  
+  
+# Example 13: Intersection using '&' Operator  
+print("Output:", myset & yorset)  
+# Output: {10, 30}  
+  
+# Example 14: Symmetric Difference using '^' Operator  
+print("Output:", myset ^ yorset)  
+# Output: {40, 50, 20, 60}  
+
+
+reation of dictionary:
+
+d={} or d=dict()  
+we are creating empty dictionary. We can add entries as follows  
+  
+d={}  
+d[100]="ashish"  
+d[200]="Prashant"  
+d[300]="sandip"  
+print(d) #{100: 'ashish', 200: 'Prashant', 300: 'sandip'}  
+  
+If we know data in advance then we can create dictionary as follows  
+  
+d={100:'ashish' ,200:'Prashant', 300:'sandip'}  
+d={key:value, key:value}  
+
+## Example 1: Take input as key-value pair and display output  
+mydict = {  
+  "name": "prashant",  
+  "professional": "developer",  
+  "empid": 1001   
+}  
+print("Example 1 Output:", mydict)  
+print(type(mydict))  
+  
+# Output:  
+# {'name': 'prashant', 'professional': 'developer', 'empid': 1001}  
+# <class 'dict'>  
+  
+# Example 2: Take input as key and display the value  
+mydict = {  
+  101: "prashant",  
+  102: "ashish",  
+  "103": "mohini",  
+  "104": "trivani",  
+  101: "ashish",  
+  104: "ashish"  
+}  
+a = mydict[102]  
+print("Example 2 Output:", a)  
+  
+# Output:  
+# ashish  
+  
+# Example 3: Change values with the help of keys  
+mydict[102] = "peter"  
+print("Example 3 Output:", mydict)  
+  
+# Output:  
+# {101: 'ashish', 102: 'peter', '103': 'mohini', '104': 'trivani', 104: 'ashish'}  
+  
+# Example 4: Print only keys using a loop  
+for x in mydict:  
+     print("Example 4 Output:", x)  
+  
+# Output:  
+# 101  
+# 102  
+# 103  
+# 104  
+# 104  
+  
+# Example 5: Print only values using values() function  
+for x in mydict.values():  
+     print("Example 5 Output:", x)  
+  
+# Output:  
+# ashish  
+# ashish  
+# mohini  
+# trivani  
+# ashish  
+  
+# Example 6: Print keys and values using items() function  
+for x, y in mydict.items():  
+    print("Example 6 Output:", x, y)  
+  
+# Output:  
+# 101   ashish  
+# 102  ashish  
+# 103  mohini  
+# 104  trivani  
+# 104  ashish  
+  
+# Example 7: Add a new key-value pair  
+mydict["mobile_no"] = 4646463738  
+print("Example 7 Output:", mydict)  
+  
+# Output:  
+# {101: 'ashish', 102: 'ashish', '103': 'mohini', '104': 'trivani', 104: 'ashish', 'mobile_no': 4646463738}  
+  
+# Example 8: Remove key-value pair using pop() function  
+mydict.pop(101)  
+print("Example 8 Output:", mydict)  
+  
+# Output:  
+# {'professional': 'developer', 'empid': 1001}  
+  
+# Example 9: Create a clone of the dictionary  
+newdict = mydict.copy()  
+print("Example 9 Output:", newdict)  
+  
+# Output:  
+# {'name': 'prashant', 'professional': 'developer}
+
+
+#cnditinal statemaent
+1) WAP to check no is negative or positive using Simple If Condition:
+
+
+value = int(input('Enter any one number:'))  
+if value>0:  
+    print('Number is positive')  		
+
+
+#Output:
+
+Enter any one number: 2
+Number is positive					
+Enter any one number: -2
+Number is Negative
+if value<0:  
+    print('Number is Negative')  
+if value ==0:  
+    print('Number is Zero')  
+32) WAP to check a person is eligible for voter Id using if else condition:
+
+
+age = int(input('Enter your ager to check voter id eligibility:'))  
+if age>= 18:  
+    print('You are eligible for voter Id')  
+else:  
+    print('You are not eligible')  
+Output:
+Enter your ager to check voter id eligibility:18
+You are eligible for voter Id
+
+#3) WAP to check biggest number among three numbers using else if ladder:
+
+
+n1=int(input("Enter First Number:"))   
+n2=int(input("Enter Second Number:"))   
+n3=int(input("Enter Third Number:"))   
+if n1>n2 and n1>n3:  
+    print("Biggest Number is:",n1)  
+elif n2>n3:  
+    print("Biggest Number is:",n2)  
+else :  
+    print("Biggest Number is:",n3)  
+Output:
+Enter First Number:5
+Enter Second Number:2
+Enter Third Number:7
+Biggest Number is: 7
+
+
+34) WAP to check biggest number among three numbers using Nested if else:
+
+a = int(input("Enter value of A:"))  
+b = int(input("Enter value of B:"))  
+c = int(input("Enter value of C:"))  
+if a>b:  
+     if a>c:  
+           print("A is greater")  
+     else:  
+           print("C is greater")  
+else:  
+     if b>c:  
+           print("B is greater")  
+     else:  
+             print("C is greater")  
+Output:
+
+Enter value of A:3
+Enter value of B:5
+Enter value of C:2
+B is greater
+
+
+##looping statement
+
+#Eg 1: To print characters present in the given string  
+s = "Ashish Gadpayle"  
+for x in s:  
+    print(x)  
+# Output:  
+A  
+s  
+h  
+i  
+s  
+h  
+   
+G  
+a  
+d  
+p  
+a  
+y  
+l  
+e  
+  
+  
+# Eg 2: To print characters present in string index-wise  
+s = input("Enter some String: ")  
+i = 0  
+for x in s:  
+    print("The character present at", i, "index is:", x)  
+    i += 1  
+# Output (Example input: 'Python'):  
+# The character present at 0 index is: P  
+# The character present at 1 index is: y  
+# The character present at 2 index is: t  
+# The character present at 3 index is: h  
+# The character present at 4 index is: o  
+# The character present at 5 index is: n  
+  
+  
+# Eg 3: To print Hello 5 times  
+for x in range(5):  
+    print("Hello")  
+# Output:  
+ Hello  
+ Hello  
+ Hello  
+ Hello  
+ Hello  
+  
+  
+# Eg 4: To display numbers from 0 to 10  
+for x in range(11):  
+    print(x)  
+# Output:  
+# 0 1 2 3 4 5 6 7 8 9 10  
+  
+  
+  
+# Eg 5: To display odd numbers from 0 to 20  
+for x in range(21):  
+    if x % 2 != 0:  
+        print(x)  
+# Output:  
+# 1 3 5 7 9 11 13 15 17 19  
+  
+  
+  
+# Eg 6: To display numbers from 10 to 1 in descending order  
+for x in range(10, 0, -1):  
+    print(x)  
+# Output:  
+# 10 9 8 7 6 5 4 3 2 1  
+  
+  
+# Eg 7: To print sum of numbers present inside list  
+lst = eval(input("Enter List: "))  
+sum = 0  
+for x in lst:  
+    sum += x  
+print("The Sum=", sum)  
+# Output (Example input: [1,2,3,4,5]):  
+# The Sum= 15  
+
+
+#While Loop:
+Syntax:
+while condition:
+	body
+
+#1) WAP to print hello world five times using While loop:
+
+count = 0  
+while count < 5:  
+    print("Count:", count)  
+    count += 1  
+Output:
+
+Hello World 0
+
+Hello World 1
+Hello World 2
+Hello World 3
+Hello World 4
+
+
+## nested for loop
+
+#WAP to print pattern using nested for loop:
+
+for i in range(1,5):  # outer loop = row  
+    for j in range(1,5): # inner loop = col  
+        print(i, end="  ")     
+    print()  
+
+
+Output:
+1 1 1 1
+2 2 2 2
+3 3 3 3
+4 4 4 4
+
+
+##prblems
+# 1) Increment for loop by 2  
+print("Example 1:")  
+for i in range(1, 10, 2):  
+    print(i, end=" ")  
+print("\n")  
+# Output: 1 3 5 7 9  
+  
+# 2) Decrement for loop by 1  
+print("Example 2:")  
+for i in range(5, 0, -1):  
+    print(i, end=" ")  
+print("\n")  
+# Output: 5 4 3 2 1  
+  
+# 3) Count, even, odd in a list  
+print("Example 3:")  
+container = [2, 1, 4, 5, 5, 4, 4, 1, 1]  
+count, even, odd = 0, 0, 0  
+for i in container:  
+    if i == 4:  
+        count += 1  
+    elif i == 2:  
+        even += 1  
+    elif i == 5:  
+        odd += 1  
+print(count - even)  
+print(count - odd)  
+print("\n")  
+# Output:  
+# 2  
+# 1  
+  
+# 4) Find the first even number  
+print("Example 4:")  
+rollno = [3, 5, 7, 1, 11, 4, 5, 2]  
+for x in rollno:  
+    if x % 2 == 0:  
+        print("Even number found:", x)  
+        break  
+print("\n")  
+# Output: Even number found: 4  
+  
+# 5) Print multiplication tables of 2, 3, 4, 5  
+print("Example 5:")  
+for i in range(1, 11):  
+    print(i * 2, i * 3, i * 4, i * 5)  
+print("\n")  
+# Output:  
+# 2 3 4 5  
+# 4 6 8 10  
+# 6 9 12 15  
+# 8 12 16 20  
+# 10 15 20 25  
+# 12 18 24 30  
+# 14 21 28 35  
+# 16 24 32 40  
+# 18 27 36 45  
+# 20 30 40 50  
+  
+# 6) Print list elements  
+print("Example 6:")  
+mylist = [3, 5, 6, 8, 2]  
+for i in mylist:  
+    print(i, end=" ")  
+print("\n")  
+# Output: 3 5 6 8 2  
+  
+# 7) Print each character in a string  
+print("Example 7:")  
+name = "Sonu"  
+for i in name:  
+    print(i)  
+print("\n")  
+# Output:  
+# S  
+# o  
+# n  
+# u  
+  
+# 8) Find specific character occurrences  
+print("Example 8:")  
+a = "shiwaleew"  
+for i in a:  
+    if i == 'w':  
+        print(i)  
+print("\n")  
+# Output:  
+# w  
+# w  
+  
+# 9) Check character type  
+print("Example 9:")  
+ch = input("Enter any character: ")  
+ascii_val = ord(ch)  
+if 65 <= ascii_val <= 90:  
+    print("Uppercase character.")  
+elif 97 <= ascii_val <= 122:  
+    print("Lowercase character.")  
+elif 48 <= ascii_val <= 57:  
+    print("Digit.")  
+else:  
+    print("Special character.")  
+print("\n")  
+# Output (Example input: $): Special character.  
+  
+# 10) Check username and password  
+print("Example 10:")  
+username = input("Enter Username: ")  
+password = input("Enter Password: ")  
+if username == password:  
+    print("Login successful")  
+else:  
+    print("Invalid login")  
+print("\n")  
+# Output (Example input: Username: prashant, Password: prashant): Login successful  
+  
+# 11) Find index of a specific character  
+print("Example 11:")  
+name = "prashant"  
+for i, x in enumerate(name):  
+    if x == 'n':  
+        print("Character at index", i, "is:", x)  
+        break  
+print("\n")  
+# Output: Character at index 6 is: n  
+  
+# 12) Sum of numbers in a list  
+print("Example 12:")  
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  
+total = sum(numbers)  
+print("The Sum =", total)  
+print("\n")  
+# Output: The Sum = 55 
+
+#largest number
+mycart = [10, 20, 200, 300, 800, 60, 700]  
+for i in mycart:  
+    if i > 400:  
+        print("This is my purchased cart item")  
+        continue  
+    print(i)  
+print("\n")  
+# Output:  
+# 10  
+# 20  
+# 200  
+# 300  
+# This is my purchased cart item  
+# 60  
+# This is my purchased cart item 
+
+
+#while with cotinue statement
+i = 0  
+while i < 6:  
+    i += 1  
+    if i == 3:  
+        continue  
+    print(i, end=" ")  
+print("\n")  
+# Output: 1 2 4 5 6   
+
