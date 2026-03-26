@@ -1,5 +1,0 @@
-pa=int(input("enter the principal amt"))
-tm=int(input("enter the time duratin"))
-ra=int(input("enter the interest"))
-si=int(pa*tm*ra/100)
-print(si)
